@@ -1,18 +1,18 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import Button from '@material-ui/core/Button';
 import AddIcon from '@material-ui/icons/Add';
 
 const CreateNote = (props) => {
     const [change, setChange] = useState(false);
 
-    const [note,setNote] =useState({
-        title:"",
-        content:""
+    const [note, setNote] = useState({
+        title: "",
+        content: ""
     });
 
-    const inputEvent =(event) => {
-        
-        const {name,value} =event.target;
+    const inputEvent = (event) => {
+
+        const { name, value } = event.target;
 
         setNote((prev) => {
             return {
@@ -21,14 +21,14 @@ const CreateNote = (props) => {
             };
         });
     };
-    
+
 
     const addEvent = () => {
-props.passNote(note);
-setNote({
-    title:"",
-    content:""
-});
+        props.passNote(note);
+        setNote({
+            title: "",
+            content: ""
+        });
     };
 
     const ExpandIt = () => {
@@ -39,25 +39,27 @@ setNote({
         setChange(false);
     }
 
-return (
- <>
-<div className="main_note" onDoubleClick={shrink}>
-<form>
-{change?
-    <input type="text" value={note.title} name="title" onChange={inputEvent} placeholder="Title" autoComplete='off' />
-    :null}
-    <textarea rows='' column='' value={note.content} name="content"  onChange={inputEvent} placeholder="Write a note..." 
-    onClick={ExpandIt} />
-    
+    return (
+        <>
+        <div className="main_note_container">
+            <div className="main_note" onDoubleClick={shrink}>
+                <form>
+                    {change ?
+                        <input type="text" value={note.title} name="title" onChange={inputEvent} placeholder="Title" autoComplete='off' />
+                        : null}
+                    <textarea rows='' column='' value={note.content} name="content" onChange={inputEvent} placeholder="Write a note..."
+                        onClick={ExpandIt} />
 
-    {change?
-    <Button onClick={addEvent}>
-<AddIcon className="plus_sign"/>
-    </Button>
-    :null}
-</form>
-</div>
-</>);
+
+                    {change ?
+                        <Button onClick={addEvent}>
+                            <AddIcon className="plus_sign" />
+                        </Button>
+                        : null}
+                </form>
+            </div>
+            </div>
+        </>);
 }
 
 export default CreateNote;
