@@ -14,6 +14,7 @@ const Login = () => {
         e.preventDefault();
 
         const res = await fetch("https://stable-notes.herokuapp.com/login", {
+          mode: 'no-cors',
           method:"POST",
           headers:{
             "Content-Type": "application/json"

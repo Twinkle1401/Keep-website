@@ -17,6 +17,7 @@ const Register = () => {
        e.preventDefault();
 
       const res =  await fetch("https://stable-notes.herokuapp.com/register", {
+        mode: 'no-cors',
         method:"POST",
         headers:{
           "Content-Type": "application/json"

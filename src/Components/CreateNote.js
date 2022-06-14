@@ -16,6 +16,7 @@ const CreateNote = (props) => {
 
     const persist =async (newNotes) => {
         const res =  await fetch("https://stable-notes.herokuapp.com/note", {
+          mode: 'no-cors',
             method:"POST",
             headers:{
               "Content-Type": "application/json",
@@ -66,6 +67,7 @@ const CreateNote = (props) => {
         console.log("in ondelete", id);
        
         const res =  await fetch("https://stable-notes.herokuapp.com/deleteNote", {
+          mode: 'no-cors',
             method:"POST",
             headers:{
               "Content-Type": "application/json",
