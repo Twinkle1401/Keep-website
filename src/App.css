@@ -1,0 +1,362 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.header_out{
+  background-color: #43414157;
+ color:whitesmoke;
+ padding:10px;
+ font-family: 'Quicksand', sans-serif;
+}
+.header_in{
+  background-color: #333;
+  padding:10px;
+  color:white;
+ font-family: 'Quicksand', sans-serif;
+ margin-bottom: 5px;
+}
+
+
+footer{
+  margin-top: 0%;
+  background-color: #43414157;
+  color: white;
+  text-align: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 30px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.createNote{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.notes{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.main_note_container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main_note{
+  justify-content: center;
+    align-items: center;
+    text-align: center;
+margin: 25px;
+    width:380px;
+    /* box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.5); */
+    border-radius: 10px;
+}
+.main_note input{
+  border:none;
+}
+.main_note textarea{
+  border: none;
+}
+
+
+input{
+  width:98%;
+  padding: 4px;
+  margin: 9px 0px;
+  border-style: none;
+   border: 1px solid black;
+}
+
+ 
+textarea{
+  padding:3px;
+  margin:0px;
+  /* border: 1px solid black; */
+  border-style: none;
+  height: 86px;
+    width: 313px;
+}
+
+
+.plus_sign{
+  color:black;
+  font-size:15px;
+}
+
+.note{
+  display: inline-block;
+  margin: 40px;
+  width: 260px;
+  /* box-shadow: 5px 5px 25px -5px rgba(0,0,0,0.5); */
+  border-radius: 10px;
+  /* height: 128px; */
+  min-height: 128px;
+  overflow: hidden;
+}
+
+.note h1{
+  /* margin-left: 5px; */
+    margin-top: 6px;
+    font-size: 21px;
+    padding:8px;
+}
+.note p{
+  /* margin-left:5px; */
+  padding:10px;
+}
+
+
+
+
+.logout_btn{
+  background-color: #333;
+  margin-bottom: 26px;
+  color: white;
+  font-size: 21px;
+  padding: 9px 15px;
+  border: 2px solid #333;
+  border-radius: 30px;
+}
+.logout_btn:hover{
+  background-color: white;
+  color: black;
+ font-weight: bold;
+}
+
+.form_page{
+  background-color: #d5d5d580;
+  height:100vh;
+  width:100%;
+  font-family: 'Quicksand', sans-serif;
+}
+
+.form_container{
+  width:60%;
+  height:80vh;
+  margin:auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+  
+  .heading{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+ font-family: 'Quicksand', sans-serif;
+  }
+  .btnClass{
+    display: block;
+      align-items: center;
+      text-align: center;
+      margin: auto;
+  }
+  .inputArea{
+      width: 530px;
+      margin:auto;
+  }
+  .form-label{
+    position: relative;
+    right: 228px;
+  }
+  /* .linkToNewPage{
+    display: inline-block;
+    position: relative;
+    left: 75%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+  }
+  
+  p {
+    margin-top: 16px;
+    margin-bottom: 1rem;
+    font-size: 16px;
+  }
+  /* .blocks{
+    margin:0;
+  } */
+
+
+  @media screen and (max-width:500px){
+    .note{
+      width:400px;
+    }
+    .main_note{
+      width:400px;
+    }
+  }
+  @media screen and (max-width:450px){
+    .note{
+      width:300px;
+    }
+    .main_note{
+      width:300px;
+    }
+    textarea{
+      width:270px;
+    }
+  }
+  /* @media screen and (max-width:400px){
+    .note{
+      width:300px;
+    }
+    .main_note{
+      width:300px;
+    }
+    textarea{
+      width:270px;
+    }
+  } */
+  @media screen and (max-width:300px){
+    .note{
+      width:200px;
+    }
+    .main_note{
+      width:200px;
+    }
+    textarea{
+      width:220px;
+    }
+  }
+
+
+
+
+
+ /* @media screen and (max-width:997px){
+    .emp-profile{
+      height:52vh;
+      margin-bottom: 100px;
+    }
+  } */
+  @media screen and (max-width:992px)
+  {
+    .inputArea{
+      width:400px;
+    }
+      .form-label{
+         right:164px;
+      }
+  }
+  /* .linkToNewPage{
+    left:65%;
+  }
+  .Signupform{
+    margin:25px 5%;
+  }
+  .Loginform{
+    margin:135px 5%;
+  }
+  .emp-profile{
+    width:56%;
+  } */
+  
+  
+  
+  /* @media screen and (max-width:774px)
+  {
+    .emp-profile{
+      height:70vh;
+  
+    }
+  } */
+  @media screen and (max-width:525px)
+  {
+    .inputArea{
+      width:350px;
+    }
+    .form-label{
+      right:140px;
+   }
+    /* .linkToNewPage{
+      left:60%;
+    }
+    .emp-profile{
+      width:80%;
+    } */
+    
+  }
+  @media screen and (max-width:400px)
+  {
+    .inputArea{
+      width:300px;
+    }
+    .form-label{
+      right:111px;
+   }
+    /* .linkToNewPage{
+      left:52%;
+    } */
+  }
+    
+   
+
+
+
+.welcome{
+  color:white;
+}
+.wel-cred{
+  color:black;
+  padding:10px;
+}
+.home_body{
+  height:100vh;
+}
+.bg-clr-dark{
+  background-color: #333;
+}
+/* .bg-clr-light{
+  background-color: #808080;
+} */
+.home_out{
+height:80vh;
+  width:50%;
+}
+.home_container{
+  display: flex;
+  flex-direction: column;
+  margin:auto;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Source Code Pro', monospace;
+}
+.home_para{
+  color:white;
+}
+.links{
+  text-decoration: none;
+    color: wheat;
+    padding: 4px 10px;
+    font-size: 23px;
+    border: 1px solid wheat;
+    margin: 7px;
+    border-radius: 10px;
+}
+.links:hover{
+  background-color: wheat;
+  color:#333;
+  font-weight: bold;
+}
+
+/* .form_btn{
+  color:white;
+  background-color: blue;
+} */
