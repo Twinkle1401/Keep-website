@@ -36,6 +36,7 @@ const CreateNote = (props) => {
 
     useEffect( async() => {
         const res =  await fetch("https://stable-notes.herokuapp.com/note", {
+          mode: 'no-cors',
             method:"GET",
             headers:{
               "Content-Type": "application/json",
@@ -74,6 +75,7 @@ const CreateNote = (props) => {
           });
         
         const result =  await fetch("https://stable-notes.herokuapp.com/note", {
+            mode: 'no-cors',
             method:"GET",
             headers:{
               "Content-Type": "application/json",
