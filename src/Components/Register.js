@@ -16,7 +16,7 @@ const Register = () => {
  const register = async(e) =>{
        e.preventDefault();
 
-      const res =  await fetch("http://localhost:5000/register", {
+      const res =  await fetch("https://stable-notes.herokuapp.com/register", {
         method:"POST",
         headers:{
           "Content-Type": "application/json"

@@ -15,7 +15,7 @@ const CreateNote = (props) => {
     const [credentials] =useContext(CredentialsContext);
 
     const persist =async (newNotes) => {
-        const res =  await fetch("http://localhost:5000/note", {
+        const res =  await fetch("https://stable-notes.herokuapp.com/note", {
             method:"POST",
             headers:{
               "Content-Type": "application/json",
@@ -35,7 +35,7 @@ const CreateNote = (props) => {
     }
 
     useEffect( async() => {
-        const res =  await fetch("http://localhost:5000/note", {
+        const res =  await fetch("https://stable-notes.herokuapp.com/note", {
             method:"GET",
             headers:{
               "Content-Type": "application/json",
@@ -64,7 +64,7 @@ const CreateNote = (props) => {
     const onDelete =async (id) => {
         console.log("in ondelete", id);
        
-        const res =  await fetch("http://localhost:5000/deleteNote", {
+        const res =  await fetch("https://stable-notes.herokuapp.com/deleteNote", {
             method:"POST",
             headers:{
               "Content-Type": "application/json",
@@ -73,7 +73,7 @@ const CreateNote = (props) => {
             body:JSON.stringify({id})
           });
         
-        const result =  await fetch("http://localhost:5000/note", {
+        const result =  await fetch("https://stable-notes.herokuapp.com/note", {
             method:"GET",
             headers:{
               "Content-Type": "application/json",
