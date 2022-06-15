@@ -16,7 +16,7 @@ const CreateNote = (props) => {
 
     const persist =async (newNotes) => {
         const res =  await fetch("https://stable-notes.herokuapp.com/note", {
-          mode: 'no-cors',
+          // mode: 'no-cors',
             method:"POST",
             headers:{
               "Content-Type": "application/json",
@@ -37,7 +37,7 @@ const CreateNote = (props) => {
 
     useEffect( async() => {
         const res =  await fetch("https://stable-notes.herokuapp.com/note", {
-          mode: 'no-cors',
+          // mode: 'no-cors',
             method:"GET",
             headers:{
               "Content-Type": "application/json",
@@ -67,7 +67,7 @@ const CreateNote = (props) => {
         console.log("in ondelete", id);
        
         const res =  await fetch("https://stable-notes.herokuapp.com/deleteNote", {
-          mode: 'no-cors',
+          // mode: 'no-cors',
             method:"POST",
             headers:{
               "Content-Type": "application/json",
@@ -77,7 +77,7 @@ const CreateNote = (props) => {
           });
         
         const result =  await fetch("https://stable-notes.herokuapp.com/note", {
-            mode: 'no-cors',
+            // mode: 'no-cors',
             method:"GET",
             headers:{
               "Content-Type": "application/json",
